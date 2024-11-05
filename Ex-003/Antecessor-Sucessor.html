@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    
+        <h1>Antes e depois</h1>
+
+        <button id="botao-ant-suc">Antecessor e Sucessor</button>
+        <div id="resposta"></div>
+
+        <script>
+            let botaoantsuc = window.document.getElementById("botao-ant-suc");
+            let resposta = window.document.getElementById("resposta");
+
+            botaoantsuc.addEventListener("click", clique);
+
+            function clique(){
+            let n = Number(prompt("Digite um numero qualquer"));
+
+            let ant = n - 1;
+            let suc = n + 1;
+
+            resposta.innerHTML = `A numero que vem antes de ${n} é ${ant}, e o numero que vem após é ${suc}`;
+            }
+        </script>
+
+    </body>
+</html>
