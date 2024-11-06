@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #btn-comprar{
+                padding: 10px;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Calculando o Troco</h1>
+
+        <button id="btn-comprar">Comprar produto</button>
+
+
+        <script>
+
+            let btn_comprar = window.document.getElementById("btn-comprar");
+
+            btn_comprar.addEventListener("click", finalizar_compra);
+
+            function finalizar_compra(){
+
+                let nome_produto = window.prompt("Que produto você está comprando?");
+                let preco_produto = Number(window.prompt(`Quanto custa o ${nome_produto} que você está comprando?`));
+                let valor_pago = Number(window.prompt(`Qual foi o valor que você deu para pagar ${nome_produto}?`));
+
+                window.alert(`Você comprou ${nome_produto}, que custou ${preco_produto.toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} em dinheiro e vai receber ${(valor_pago - preco_produto).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} de troco, Volte sempre!`)
+              
+            }
+        </script>
+    </body>
+</html>
