@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="conversor()">conversor</button>
+    <div id="resultado"></div>
+
+    <script>
+        function conversor(){
+            let metros = Number(window.prompt("Digite a medida para ser convertida ( m )"));
+
+            let km = metros * 0.001;
+            let hm = metros * 0.01;
+            let dam = metros * 0.1;
+            metros = metros * 1;
+            let dm = metros * 10;
+            let cm = metros * 100;
+            let mm = metros * 1000;
+
+            window.document.getElementById("resultado").innerHTML = 
+            `
+            ${km.toLocaleString('pt-BR')} Kilometros (Km) <br>
+            ${hm.toLocaleString('pt-BR')} Hectometros (Hm) <br>
+            ${dam.toLocaleString('pt-BR')} Decametros (Dam) <br>
+            ${metros.toLocaleString('pt-BR')} metros (m) <br>
+            ${dm.toLocaleString('pt-BR')} decimetros (dm) <br>
+            ${cm.toLocaleString('pt-BR')} centimetros (cm) <br>
+            ${mm.toLocaleString('pt-BR')} milimetros (mm) <br>
+            `;
+        }
+    </script>
+</body>
+</html>
